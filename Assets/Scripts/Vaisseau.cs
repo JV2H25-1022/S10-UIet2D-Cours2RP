@@ -12,6 +12,8 @@ public class Vaisseau : MonoBehaviour
 
     private Rigidbody2D rb;
     private Animator animator;
+
+    public GameObject roche;
     
     private Vector2 directionInput;
     private Vector2 positionPointerEcran;
@@ -73,5 +75,7 @@ public class Vaisseau : MonoBehaviour
     private void OnDestroy()
     {
         Instantiate(fxExplosion, transform.position, transform.rotation);
+
+        roche.SetActive(true);
     }
 }
